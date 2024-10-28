@@ -19,8 +19,7 @@ const AccountDepositProofPreview = ({
       <div className="w-[90dvw] h-[80dvh] relative">
         <div className="h-[75dvh] bg-gray-300">
           <p className="bg-gray-50 text-primary-500 text-center mx-auto">
-            {" "}
-            {`${payment?.price} ${payment?.currency}`}
+            {payment?.price} {" DZ"}
           </p>
           <div
             className="single-slide bg-no-repeat bg-contain bg-center w-full h-[70dvh] relative flex justify-center"

@@ -9,6 +9,7 @@ const ServicesPage = lazy(() => import("./pages/app/ServicesPage"));
 const UserProfile = lazy(() => import("./pages/app/Profile"));
 const AdminDashbord = lazy(() => import("./pages/app/Dashboard"));
 const UsersPage = lazy(() => import("./pages/app/UsersPage"));
+const PaymentPage = lazy(() => import("./pages/app/Payments"));
 const ReservationsPage = lazy(() => import("./pages/app/ReservationsPage"));
 
 // middelwares
@@ -30,6 +31,7 @@ function App() {
           <Route path="users" element={<UsersPage />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="reservations" element={<ReservationsPage />} />
+          <Route path="paiments" element={<PaymentPage />} />
           <Route path="profile" element={<UserProfile />} />
         </Route>
         <Route

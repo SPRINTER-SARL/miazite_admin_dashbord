@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import {
   getDataByCondition,
   getDocumentByName,
-  getAllSubDocument,
   updateSubDocument,
 } from "@/utils/firebase/firebaseServices";
 import Loading from "@/components/Loading";
@@ -50,7 +49,7 @@ const UserDetailsModal = ({
     setIsLoading(true);
     try {
       const response = user?.uid
-        ? await getAllSubDocument("Profile", user?.uid, "Payments")
+        ? await getDataByCondition("Payments", "userId", "==", user?.uid ?? "")
         : [];
       if (response.length) setPayments(response);
     } catch (error) {
@@ -63,10 +62,13 @@ const UserDetailsModal = ({
   const fetchService = async () => {
     setIsLoading(true);
     try {
-      const response = user?.service || user?.services  ? await getDocumentByName(
-        "Specialities",
-        user?.service ?? user?.services
-      ): null;
+      const response =
+        user?.service || user?.services
+          ? await getDocumentByName(
+              "Specialities",
+              user?.service ?? user?.services
+            )
+          : null;
 
       if (response) setService(response);
     } catch (error) {

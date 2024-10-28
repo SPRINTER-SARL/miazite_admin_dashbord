@@ -23,7 +23,6 @@ const ServicesList = () => {
     fetchAllServices();
   }, []);
 
-
   const handelOnUpdated = async () => {
     toggleShouldDisplayDetails();
     await fetchAllServices();
@@ -46,7 +45,7 @@ const ServicesList = () => {
   const handleCloseDetailsModal = () => {
     toggleShouldDisplayDetails();
     setActiveService({});
-  }
+  };
 
   return (
     <div>
@@ -91,9 +90,9 @@ const ServicesList = () => {
               </p>
               <p className="text-gray-500 text-sm flex items-center gap-2 px-4 pb-4">
                 <Icon icon="heroicons:banknotes" />
-                <span>{`${serviceItem?.commission?.amount ?? ""} ${
-                  serviceItem?.commission?.currency ?? ""
-                }`}</span>
+                <span>{`${
+                  serviceItem?.commission?.amount * 96.05 ?? ""
+                } ${"DZ"}`}</span>
               </p>
             </div>
           ))}

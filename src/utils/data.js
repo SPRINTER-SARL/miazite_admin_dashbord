@@ -22,6 +22,12 @@ export const sideMenus = [
     icon: "heroicons:calendar",
     link: "reservations",
   },
+  {
+    title: "Paiments",
+    isHide: true,
+    icon: "heroicons:banknotes",
+    link: "/paiments",
+  },
 
 ];
 

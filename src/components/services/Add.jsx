@@ -52,8 +52,8 @@ const AddServiceModal = ({ isActive, onClose, onCreated }) => {
         photoURL: imageId,
         specProviderCount: 0,
         commission: {
-          amount: commissionAmount,
-          currency: commissionCurrency
+          amount: commissionAmount / 96.05,
+          currency: "CAD"
         }
       });
 

@@ -165,14 +165,14 @@ const ReservationDetailsModal = ({
           <div className="flex items-center gap-3">
             <div
               className={`w-max px-3 text-center py-1 5 text-sm font-medium rounded-full ${
-                row?.status === Status.EN_ATTENTE
+                reservation?.status === Status.EN_ATTENTE
                   ? "bg-orange-200 text-orange-500"
-                  : row?.status === Status.EN_COURS
+                  : reservation?.status === Status.EN_COURS
                   ? "bg-blue-200 text-blue-500"
-                  : row?.status === Status.TERMINEE
+                  : reservation?.status === Status.TERMINEE
                   ? "bg-green-200 text-green-600"
-                  : row?.status === Status.ANNULEE ||
-                    row?.status === Status.FAILED
+                  : reservation?.status === Status.ANNULEE ||
+                    reservation?.status === Status.FAILED
                   ? "bg-red-200 text-red-400"
                   : ""
               }`}

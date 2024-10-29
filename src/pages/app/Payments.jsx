@@ -92,7 +92,6 @@ const UsersList = () => {
               payment?.userId ?? ""
             )
           : [];
-        console.log(response[0], payment.userId);
 
         if (response.length) setClient(response[0]);
       } catch (error) {
@@ -108,7 +107,7 @@ const UsersList = () => {
     return (
       <div className="rounded border hover:bg-gray-100 cursor-pointer p-3">
         <p className="text-base">
-          {Math.round(payment?.price * 96.05)} {" DZ"}
+          {Math.round(payment?.price * 96.62)} {" DZ"}
         </p>
         <div className="flex text-gray-500 items-center gap-3 py-2 divide-x">
           <div className="flex gap-2 items-center text-sm">

@@ -64,7 +64,7 @@ const EditServiceModal = ({ onClose, service }) => {
         photoURL: imageId,
         specProviderCount: 0,
         commission: {
-          amount: commissionAmount / 96.05,
+          amount: commissionAmount / 96.62,
           currency: "CAD",
         },
       });
@@ -110,7 +110,7 @@ const EditServiceModal = ({ onClose, service }) => {
       <InputGroup
         type="text"
         label="Commission"
-        value={commissionAmount * 96.05}
+        value={commissionAmount * 96.62}
         onChange={(e) => setCommitionAmount(e.target.value)}
         name="commission"
         prepend={

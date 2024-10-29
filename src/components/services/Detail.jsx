@@ -129,7 +129,7 @@ const ServiceDetailsModal = ({ service, isActive, onClose, onUpdated }) => {
 
               <p className="text-gray-500 text-sm flex items-center gap-2 pb-4">
                 <Icon icon="heroicons:banknotes" />
-                <span>{`${service?.commission?.amount * 96.05 ?? ""} ${
+                <span>{`${service?.commission?.amount * 96.62 ?? ""} ${
                    "DZ"
                 }`}</span>
               </p>

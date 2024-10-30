@@ -18,7 +18,7 @@ const EditServiceModal = ({ onClose, service }) => {
   const [picture, setPicture] = useState("");
   const [isLoading, setIsLoading] = useState("");
   const [commissionAmount, setCommitionAmount] = useState(
-    service?.commission?.amount ?? 0
+    service?.commission?.amount * 96.62 ?? 0
   );
   const [commissionCurrency, setCommitionCurrency] = useState(
     `${service?.commission?.currency ?? "DZ"}`
@@ -54,7 +54,7 @@ const EditServiceModal = ({ onClose, service }) => {
     try {
       const imageId = shouldDisplayOldImage
         ? service.photoURL
-        : await saveImage(picture) ?? "";
+        : (await saveImage(picture)) ?? "";
 
       if (!imageId) return;
 
@@ -110,7 +110,7 @@ const EditServiceModal = ({ onClose, service }) => {
       <InputGroup
         type="text"
         label="Commission"
-        value={commissionAmount * 96.62}
+        value={commissionAmount}
         onChange={(e) => setCommitionAmount(e.target.value)}
         name="commission"
         prepend={

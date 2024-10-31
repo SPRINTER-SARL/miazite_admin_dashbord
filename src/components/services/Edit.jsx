@@ -29,7 +29,6 @@ const EditServiceModal = ({ onClose, service }) => {
 
   const currencies = [
     { value: "DZ", label: "DZ" },
-    { value: "USD", label: "USD" },
   ];
 
   const schema = yup

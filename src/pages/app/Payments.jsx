@@ -77,7 +77,7 @@ const UsersList = () => {
     }
   };
 
-  const PaymentItem = ({ payment }) => {
+  const PaymentItem = ({ payment, onClick }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [client, setClient] = useState(false);
 
@@ -105,7 +105,10 @@ const UsersList = () => {
       fetchProfile();
     }, []);
     return (
-      <div className="rounded border hover:bg-gray-100 cursor-pointer p-3">
+      <div
+        onClick={onClick}
+        className="rounded border hover:bg-gray-100 cursor-pointer p-3"
+      >
         <p className="text-base">
           {Math.round(payment?.price * 96.62)} {" DZ"}
         </p>
